@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: poke-php
+    restart: always
+    working_dir: /var/www/
+    volumes:
+      - ../src:/var/www
+  nginx:
+    image: nginx:1.19-alpine
+    container_name: poke-nginx
+    restart: always
+    ports:
+      - 8088:80
+    volumes:
+      - ../src:/var/www
+      - ./nginx:/etc/nginx/conf.d
