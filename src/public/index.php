@@ -2,7 +2,7 @@
 
 $ch = curl_init();
 
-$url = 'http://www.example.com';
+$url = 'https://pokeapi.co/api/v2/pokemon/bulbasaur';
 
 curl_setopt($ch, CURLOPT_URL, $url);
 
@@ -12,7 +12,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
 $response = curl_exec($ch);
 
-echo 'HTTP Status Code: ' . curl_getinfo($ch, CURLINFO_HTTP_CODE) . PHP_EOL;
-echo 'Response Body: ' . $response . PHP_EOL;
+echo '<pre>';
+
+print_r(curl_getinfo($ch));
 
 curl_close($ch);
