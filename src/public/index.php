@@ -1,19 +1,36 @@
 <?php
 
-$ch = curl_init();
+class Pokedex
+{
+    public function __construct()
+    {
+        $this->site = 'https://pokeapi.co/api/v2/';
+    }
 
-$url = 'https://pokeapi.co/api/v2/pokemon/bulbasaur';
+    public function pokemonByName($endPoint = pokemon, $name = bulbasaur)
+    {
+        $url =  $this->site.'/'.$endPoint.'/?name='.$name;
 
-curl_setopt($ch, CURLOPT_URL, $url);
+        return $this->getPokemon($url);
+    } 
 
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+    public function getPokemon($url)
+    {
+        $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_URL, $url);
 
-$response = curl_exec($ch);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 
-echo '<pre>';
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
-print_r(curl_getinfo($ch));
+        $response = curl_exec($ch);
 
-curl_close($ch);
+        echo '<pre>';
+
+        print_r(curl_getinfo($ch));
+
+        curl_close($ch);
+    }
+}
+
