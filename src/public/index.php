@@ -2,16 +2,13 @@
 
 class Pokedex
 {
-    private string $endPoint = 'pokemon';
-
-    private string $name = 'bulbasaur';
 
     public function __construct()
     {
         $this->site = 'https://pokeapi.co/api/v2';
     }
 
-    public function pokemonByName()
+    public function pokemonByName($endPoint = 'pokemon', $name = 'bulbasaur')
     {
         $url =  $this->site.'/'.$endPoint.'/'.$name;
 
