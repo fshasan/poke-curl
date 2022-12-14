@@ -4,10 +4,10 @@ class Pokedex
 {
     public function __construct()
     {
-        $this->site = 'https://pokeapi.co/api/v2/';
+        $this->site = 'https://pokeapi.co/api/v2';
     }
 
-    public function pokemonByName($endPoint = pokemon, $name = bulbasaur)
+    public function pokemonByName($endPoint = 'pokemon', $name = 'bulbasaur')
     {
         $url =  $this->site.'/'.$endPoint.'/?name='.$name;
 
@@ -32,5 +32,12 @@ class Pokedex
 
         curl_close($ch);
     }
+
 }
+
+$obj = new Pokedex;
+
+$obj->pokemonByName();
+
+?>
 
