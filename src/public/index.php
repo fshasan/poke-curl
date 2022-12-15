@@ -36,9 +36,9 @@ class Pokedex
 
 }
 
-$obj = new Pokedex;
+    $obj = new Pokedex;
 
-$obj->pokemonByName();
+    $obj->pokemonByName();
 
 ?>
 
