@@ -2,15 +2,37 @@
 
 class Pokedex
 {
+    private $pokename = "dialga";
 
     public function __construct()
     {
-        $this->site = 'https://pokeapi.co/api/v2';
+        $this->site = 'https://pokeapi.co/api/v2/pokemon';
     }
 
-    public function pokemonByName($endPoint = 'pokemon', $name = 'bulbasaur')
+    public function getSearch()
     {
-        $url =  $this->site.'/'.$endPoint.'/'.$name;
+        $search = (string)$this->pokename;
+
+        if (is_string($search))
+        {
+            if (preg_match('/^\d/', $search) === 1)
+            {
+                $search = (int)$search;
+            }
+            else
+            {
+                $search = strtolower($search);
+            }
+        }
+        return $search;
+
+    }
+
+    public function whoIsThatPokemon()
+    {
+        $search = $this->getSearch();
+
+        $url =  $this->site.'/'.$search;
 
         return $this->getPokemon($url);
     } 
@@ -27,9 +49,15 @@ class Pokedex
 
         $response = curl_exec($ch);
 
+        $data = json_decode($response);
+
         echo '<pre>';
 
-        print_r(curl_getinfo($ch));
+        echo "ID => ".$data->id. "\n";
+        echo "Name => ".$data->name. "\n";
+        echo "Height => ".$data->height." cm". "\n";
+        echo "Weight => ".$data->weight." kg". "\n";
+        echo "Image => ".$data->sprites->front_default;
 
         curl_close($ch);
     }
@@ -38,7 +66,7 @@ class Pokedex
 
     $obj = new Pokedex;
 
-    $obj->pokemonByName();
+    $obj->whoIsThatPokemon();
 
 ?>
 
