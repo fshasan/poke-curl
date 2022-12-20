@@ -1,3 +1,9 @@
+## Requirements
+
+* [PHP 8](https://kinsta.com/blog/install-php/)
+* [Docker](https://docs.docker.com/get-docker/)
+* [Docker Compose](https://docker-docs.netlify.app/compose/install/)
+
 ## Docker Services
 
 * [php: 8.0.2-fpm](https://hub.docker.com/layers/library/php/8.0.20-fpm/images/sha256-633d4e24d4cd4748c2700206f4e2e75eab3a4f1b74fdc330063db1b5a5b3409d?context=explore)
