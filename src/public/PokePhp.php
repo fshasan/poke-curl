@@ -2,16 +2,15 @@
 
 class Pokedex
 {
-    private $pokename = "dialga";
 
     public function __construct()
     {
         $this->site = 'https://pokeapi.co/api/v2/pokemon';
     }
 
-    public function getSearch()
+    public function getSearch($pokemon)
     {
-        $search = (string)$this->pokename;
+        $search = (string)$pokemon;
 
         if (is_string($search))
         {
@@ -28,9 +27,9 @@ class Pokedex
 
     }
 
-    public function whoIsThatPokemon()
+    public function whoIsThatPokemon($pokemon)
     {
-        $search = $this->getSearch();
+        $search = $this->getSearch($pokemon);
 
         $url =  $this->site.'/'.$search;
 
