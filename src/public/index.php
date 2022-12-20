@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Pokedex</title>
+
 </head>
 <body>
     <div class="container mt-5" style="float: center">
@@ -18,11 +19,22 @@
                 <input type="text" class="form-control" name="search" required placeholder="Enter ID or Name">
             </div>
             <button type="submit" class="btn btn-primary mb-2">Search</button>
-            <button type="reset"class="btn btn-danger mb-2 ml-2">Clear</button>
+            <button type="reset" id="resetBtn" class="btn btn-danger mb-2 ml-2" onClick='redirectToURL(this.id)'>Clear</button>
         </form>
     </div>
 </body>
 </html>
+
+<script type="text/javascript">
+    function redirectToURL(btnId)
+    {
+        if(btnId=="resetBtn")
+        {
+            window.location.replace("http://localhost:8088/");
+        }
+
+    }
+</script>
 
 <?php 
 
@@ -36,6 +48,5 @@
         
         $obj->whoIsThatPokemon($pokemon);
     }
-
     
 ?>
