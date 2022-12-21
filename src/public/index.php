@@ -46,7 +46,15 @@
     {
         $pokemon = $_GET['search'];
         
-        $obj->whoIsThatPokemon($pokemon);
+        $data = $obj->whoIsThatPokemon($pokemon);
+
+        echo '<pre>';
+
+        echo "ID => ".$data->id. "\n";
+        echo "Name => ".$data->name. "\n";
+        echo "Height => ".$data->height." cm". "\n";
+        echo "Weight => ".$data->weight." kg". "\n";
+        echo "Image => ".$data->sprites->front_default;
     }
     
 ?>

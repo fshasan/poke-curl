@@ -50,15 +50,9 @@ class Pokedex
 
         $data = json_decode($response);
 
-        echo '<pre>';
-
-        echo "ID => ".$data->id. "\n";
-        echo "Name => ".$data->name. "\n";
-        echo "Height => ".$data->height." cm". "\n";
-        echo "Weight => ".$data->weight." kg". "\n";
-        echo "Image => ".$data->sprites->front_default;
-
         curl_close($ch);
+
+        return $data;
     }
 
 }
