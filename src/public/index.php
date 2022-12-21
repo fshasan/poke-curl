@@ -11,14 +11,13 @@
     <div class="logo mt-5">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/269px-International_Pok%C3%A9mon_logo.svg.png" height="100%" alt="logo"/>
     </div>
-    <div class="search-container mt-5">
+    <div class="search-container mt-3">
         <form class="form-inline" method="GET">
             <div class="form-group mx-sm-3 mb-2">
-                <label class="mr-3">Pokemon</label>
                 <input type="text" class="form-control" name="search" required placeholder="Enter ID or Name">
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Search</button>
-            <button type="reset" id="resetBtn" class="btn btn-danger mb-2 ml-2" onClick='redirectToURL(this.id)'>Clear</button>
+            <button type="submit" class="btn btn-primary mb-2"><i class="bi bi-binoculars-fill"></i></button>
+            <button type="reset" id="resetBtn" class="btn btn-danger mb-2 ml-2" onClick='redirectToURL(this.id)'><i class="bi bi-stars"></i></button>
         </form>
     </div>
 </body>
@@ -41,8 +40,8 @@
 
         echo "ID => ".$data->id. "\n";
         echo "Name => ".$data->name. "\n";
-        echo "Height => ".$data->height." cm". "\n";
-        echo "Weight => ".$data->weight." kg". "\n";
+        echo "Height => ".($data->height * 10)." cm". "\n";
+        echo "Weight => ".($data->weight / 10)." kg". "\n";
         echo "Image => ".$data->sprites->front_default;
     }
     
