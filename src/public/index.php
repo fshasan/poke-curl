@@ -23,8 +23,25 @@
     </div>
     <div class="content-container mt-3">
         <div class="form-group">
-            <label for="formGroupExampleInput2">Name</label>
-            <input type="text" id="poke-name" class="form-control" name="name" disabled value="<?php echo $data->name?>">
+            <label>ID</label>
+            <input type="text" id="poke-id" class="form-control" name="id" disabled value="<?php echo $data->id ?? ''?>">
+        </div>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="poke-name" class="form-control" name="name" disabled value="<?php echo $data->name ?? ''?>">
+        </div>
+        <div class="form-group">
+            <label>Height in cm</label>
+            <input type="text" id="poke-height" class="form-control" name="height" disabled value="<?php echo $data->height  ?? ''?>">
+        </div>
+        <div class="form-group">
+            <label>Weight in kg</label>
+            <input type="text" id="poke-weight" class="form-control" name="weight" disabled value="<?php echo $data->weight ?? ''?>">
+        </div>
+        <div class="form-group">
+            <label>Types</label>
+            <input type="text" id="poke-types" class="form-control" name="types" disabled value="<?php echo $data->types[0]->type->name ?? ''?>">
+            <input type="text" id="poke-types" class="form-control" name="types" disabled value="<?php echo $data->types[1]->type->name ?? ''?>">
         </div>
 
     </div>

@@ -10,6 +10,10 @@
         
         $data = $obj->whoIsThatPokemon($pokemon);
 
+        $data->height = $data->height * 10; 
+        
+        $data->weight = $data->weight / 10; 
+
     }
     
 ?>
