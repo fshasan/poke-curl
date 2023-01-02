@@ -1,3 +1,7 @@
+## Noteworthy 
+
+<b>A dockerized php application.</b>
+
 ## Requirements
 
 * [PHP 8](https://kinsta.com/blog/install-php/)
