@@ -4,7 +4,7 @@
 
     $obj = new Pokedex;
 
-    if(isset($_GET['search']) && $_GET['search'] != NULL)
+    if(isset($_GET['search']))
     {
         $pokemon = $_GET['search'];
         
