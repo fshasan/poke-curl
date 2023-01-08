@@ -12,7 +12,7 @@
     <div class="example-box">
     <div class="background-shapes"></div>
         <div class="logo mt-5">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/269px-International_Pok%C3%A9mon_logo.svg.png" height="100%" alt="logo"/>
+        <img src="https://cutt.ly/Q2Wh1oB" height="100%" alt="logo"/>
         </div>
         <div class="search-container mt-3">
             <form class="form-inline" method="GET">
@@ -58,7 +58,5 @@
         {
             window.location.replace("http://localhost:8088/");
         }
-
     }
-
 </script>
