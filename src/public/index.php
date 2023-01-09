@@ -23,29 +23,16 @@
                 <button type="reset" id="resetBtn" class="btn btn-danger mb-2 ml-2" onClick='redirectToURL(this.id)'><i class="bi bi-stars"></i></button>
             </form>
         </div>
-        <div class="content-container mt-3">
-            <div class="form-group">
-                <label>ID</label>
-                <input type="text" id="poke-id" class="form-control" name="id" disabled value="<?php echo $data->id ?? ''?>">
+        <main>
+            <div class="pokemon-card">
+                <img src=<?php echo $data->sprites->front_default ?? "https://cutt.ly/02RQ5TZ"?> alt="<?php echo $data->id ?? ''?>">
+                <h3><?php echo $data->name ?? ''?></h3>
+                <p>Type: <?php echo $data->types[0]->type->name ?? ''?> , <?php echo $data->types[1]->type->name ?? ''?> </p>
+                <p>Abilities: <?php echo $data->abilities[0]->ability->name ?? ''?> , <?php echo $data->abilities[1]->ability->name ?? ''?></p>
+                <p>Height: <?php echo $data->height ?? ''?></p>
+                <p>Weight: <?php echo $data->weight ?? ''?></p>
             </div>
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" id="poke-name" class="form-control" name="name" disabled value="<?php echo $data->name ?? ''?>">
-            </div>
-            <div class="form-group">
-                <label>Height in cm</label>
-                <input type="text" id="poke-height" class="form-control" name="height" disabled value="<?php echo $data->height  ?? ''?>">
-            </div>
-            <div class="form-group">
-                <label>Weight in kg</label>
-                <input type="text" id="poke-weight" class="form-control" name="weight" disabled value="<?php echo $data->weight ?? ''?>">
-            </div>
-            <div class="form-group">
-                <label>Types</label>
-                <input type="text" id="poke-types" class="form-control" name="types" disabled value="<?php echo $data->types[0]->type->name ?? ''?>">
-                <input type="text" id="poke-types" class="form-control" name="types" disabled value="<?php echo $data->types[1]->type->name ?? ''?>">
-            </div>
-        </div>
+        </main>
     </div>
 </body>
 

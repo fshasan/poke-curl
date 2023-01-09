@@ -8,3 +8,4 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 <link rel="stylesheet" href="stylesheet/style.css"/>
 <link rel="stylesheet" href="stylesheet/background-style.css"/>
+<link rel="stylesheet" href="stylesheet/pokedex-base.css"/>
