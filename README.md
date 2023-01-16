@@ -1,3 +1,9 @@
+## Preview
+
+This is the version 1 of the pokedex.
+
+
+
 ## Noteworthy 
 
 <b>A dockerized php application.</b>
