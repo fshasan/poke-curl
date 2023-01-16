@@ -32,4 +32,5 @@
    ```sh
    docker-compose down
 
+
 Once the installation is complete, jump right in at http://localhost:8088/ to view your pokedex!
