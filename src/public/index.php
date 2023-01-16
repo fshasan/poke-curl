@@ -20,7 +20,7 @@
                     <input type="text" class="form-control" id="searchID" name="search" required placeholder="Enter ID or Name" autocomplete="off">
                 </div>
                 <button type="submit" id="search-id" class="btn btn-primary mb-2"><i class="bi bi-binoculars-fill"></i></button>
-                <button type="reset" id="resetBtn" class="btn btn-danger mb-2 ml-2" onClick='redirectToURL(this.id)'><i class="bi bi-stars"></i></button>
+                <button type="reset" id="resetBtn" class="btn btn-info mb-2 ml-2" onClick='redirectToURL(this.id)'><i class="bi bi-stars"></i></button>
             </form>
         </div>
         <main>
