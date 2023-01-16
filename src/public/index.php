@@ -25,12 +25,16 @@
         </div>
         <main>
             <div class="pokemon-card">
-                <img src=<?php echo $data->sprites->front_default ?? "https://cutt.ly/02RQ5TZ"?> alt="<?php echo $data->id ?? ''?>"width="300" height="100">
-                <h3><?php echo $data->name ?? ''?></h3>
-                <p>Type: <?php echo $data->types[0]->type->name ?? ''?> <?php echo $data->types[1]->type->name ?? ''?> </p>
-                <p>Abilities: <?php echo $data->abilities[0]->ability->name ?? ''?> <?php echo $data->abilities[1]->ability->name ?? ''?></p>
-                <p>Height: <?php echo $data->height ?? ''?></p>
-                <p>Weight: <?php echo $data->weight ?? ''?></p>
+                <div class="image-container">
+                    <img src=<?php echo $data->sprites->front_default ?? "https://cutt.ly/02RQ5TZ"?> alt="<?php echo $data->id ?? ''?>" width="360px" height="200px">
+                </div>       
+                <div class="contents mt-4">
+                    <p>Name: <?php echo $data->name ?? '' ?></p>
+                    <p>Type: <?php echo $data->types[0]->type->name ?? ''?> <?php echo $data->types[1]->type->name ?? ''?> </p>
+                    <p>Abilities: <?php echo $data->abilities[0]->ability->name ?? ''?> <?php echo $data->abilities[1]->ability->name ?? ''?></p>
+                    <p>Height: <?php echo $data->height ?? ''?></p>
+                    <p>Weight: <?php echo $data->weight ?? ''?></p>
+                </div>
             </div>
         </main>
     </div>
