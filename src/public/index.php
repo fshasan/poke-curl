@@ -25,7 +25,7 @@
         </div>
         <main>
             <div class="pokemon-card">
-                <img src=<?php echo $data->sprites->front_default ?? "https://cutt.ly/02RQ5TZ"?> alt="<?php echo $data->id ?? ''?> width="100" height="100"">
+                <img src=<?php echo $data->sprites->front_default ?? "https://cutt.ly/02RQ5TZ"?> alt="<?php echo $data->id ?? ''?>"width="300" height="100">
                 <h3><?php echo $data->name ?? ''?></h3>
                 <p>Type: <?php echo $data->types[0]->type->name ?? ''?> <?php echo $data->types[1]->type->name ?? ''?> </p>
                 <p>Abilities: <?php echo $data->abilities[0]->ability->name ?? ''?> <?php echo $data->abilities[1]->ability->name ?? ''?></p>
