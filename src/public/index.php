@@ -32,8 +32,8 @@
                     <p>Name: <?php echo $data->name ?? '' ?></p>
                     <p>Type: <?php echo $data->types[0]->type->name ?? ''?> <?php echo $data->types[1]->type->name ?? ''?> </p>
                     <p>Abilities: <?php echo $data->abilities[0]->ability->name ?? ''?> <?php echo $data->abilities[1]->ability->name ?? ''?></p>
-                    <p>Height: <?php echo $data->height ?? ''?></p>
-                    <p>Weight: <?php echo $data->weight ?? ''?></p>
+                    <p>Height: <?php echo $data->height ?? ''?> cm</p>
+                    <p>Weight: <?php echo $data->weight ?? ''?> kg</p>
                 </div>
             </div>
         </main>
