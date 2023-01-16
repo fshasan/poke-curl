@@ -11,7 +11,7 @@
 <body>
     <div class="example-box">
     <div class="background-shapes"></div>
-        <div class="logo mt-5">
+        <div class="logo">
         <img src="https://cutt.ly/Q2Wh1oB" height="100%" alt="logo"/>
         </div>
         <div class="search-container mt-3">
