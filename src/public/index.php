@@ -26,14 +26,14 @@
         <main>
             <div class="pokemon-card">
                 <div class="image-container">
-                    <img src=<?php echo $data->sprites->front_default ?? "https://cutt.ly/02RQ5TZ"?> alt="<?php echo $data->id ?? ''?>" width="360px" height="200px">
+                    <img src=<?php echo $pokemonDetails['front_image'] ?? "https://cutt.ly/02RQ5TZ"?> alt="<?php echo $pokemonDetails['id'] ?? ''?>" width="360px" height="200px">
                 </div>       
                 <div class="contents mt-4">
-                    <p>Name: <?php echo $data->name ?? '' ?></p>
-                    <p>Type: <?php echo $data->types[0]->type->name ?? ''?> <?php echo $data->types[1]->type->name ?? ''?> </p>
-                    <p>Abilities: <?php echo $data->abilities[0]->ability->name ?? ''?> <?php echo $data->abilities[1]->ability->name ?? ''?></p>
-                    <p>Height: <?php echo $data->height ?? ''?> cm</p>
-                    <p>Weight: <?php echo $data->weight ?? ''?> kg</p>
+                    <p>Name: <?php echo $pokemonDetails['name'] ?? '' ?></p>
+                    <p>Type: <?php echo $pokemonDetails['type_1'] ?? ''?> <?php echo $pokemonDetails['type_2'] ?? ''?> </p>
+                    <p>Abilities: <?php echo $pokemonDetails['ability_1'] ?? ''?> <?php echo $pokemonDetails['ability_2'] ?? ''?></p>
+                    <p>Height: <?php echo $pokemonDetails['height'] ?? ''?> cm</p>
+                    <p>Weight: <?php echo $pokemonDetails['weight'] ?? ''?> kg</p>
                 </div>
             </div>
         </main>
