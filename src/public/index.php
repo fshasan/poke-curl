@@ -42,7 +42,7 @@
 
 </html>
 
-<script type="text/javascript">
+<script>
     function redirectToURL(btnId)
     {
         if(btnId=="resetBtn")
