@@ -1,8 +1,6 @@
 ## Preview
 
- <p align="center">
-   <img src="./images/V1.gif">
-</p>
+Click [here](https://raw.githubusercontent.com/Fsh-98/poke-curl/master/images/V1.gif) to view the <b><i>v1</i></b> of this application.
 
 ## Requirements
 
