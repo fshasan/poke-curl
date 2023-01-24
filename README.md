@@ -1,6 +1,6 @@
 ## Preview
 
-Click [here](https://raw.githubusercontent.com/Fsh-98/poke-curl/master/images/V1.gif) to view the <b><i>v1</i></b> of this application.
+Click [here](https://raw.githubusercontent.com/Fsh-98/poke-curl/master/images/V1.gif) to view the <b><i>v1</i></b> of this application. This php application is also `dockerized`.
 
 ## Requirements
 
